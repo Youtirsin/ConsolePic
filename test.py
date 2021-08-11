@@ -1,8 +1,9 @@
 from PIL import Image
+from StrPainter import *
 
 
 def test():
-    print("Hello \u001b[31m world \u001b[0m")
+    print(paintedStrBg(" " * 10, "red"))
 
 
 def test1():
@@ -17,4 +18,4 @@ def test1():
 
 
 if __name__ == '__main__':
-    test1()
+    test()
