@@ -1,11 +1,10 @@
 # Show Picture In Shells
-Use shell to show  pictures in colors
+## References
+[Output strings in colors——ANSIConsole](./notes/src/ANSIConsole.md)
 
-## Not Finished yet
+[Introdution of Python Module PIL](https://blog.csdn.net/zhangziju/article/details/79123275)
 
-### Well, now its finished
-
-## Gonna take a break
+[Image Mode"P"](./notes/src/ImageMode.md)
 
 # 使用控制台带颜色输出图片
 
