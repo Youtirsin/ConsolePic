@@ -1,9 +1,9 @@
 from PIL import Image
-from StrPainter import *
 
 
 def test():
-    print(paintedStrBg(" " * 10, "red"))
+    arr = [i for i in range(0, 10)]
+    print(arr)
 
 
 def test1():
@@ -17,5 +17,28 @@ def test1():
     print(palette)
 
 
+def test2():
+    base_dir = "./src/img/"
+    names = ["dog.jpg", "girl.jpg", "guai.jpg", "han.png"]
+
+    imgs = []
+    first = Image.open(base_dir + names[0]).copy()
+    imgs.append(first)
+
+    for i in range(1, len(names)):
+        pic_name = base_dir + names[i]
+        temp = Image.open(pic_name)
+        imgs.append(temp)
+    first.save("test.gif", save_all=True, append_images=imgs, duration=130)
+    return 1
+    # for i in range(n):
+    #     pic_name = '{}/{}.png'.format(pics_dir, i)
+    #     temp = Image.open(pic_name)
+    #     imgs.append(temp)
+    # save_name = '{}.gif'.format(pics_dir)
+    # imgs[0].save(save_name, save_all=True, append_images=imgs, duration=t)
+    # return save_name
+
+
 if __name__ == '__main__':
-    test()
+    test2()
