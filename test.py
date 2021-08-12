@@ -2,8 +2,18 @@ from PIL import Image
 
 
 def test():
-    arr = [i for i in range(0, 10)]
-    print(arr)
+    img = Image.open("./src/img/kun.gif")
+    print(img.size)
+    print(img.info)
+
+    frameCount = 0
+    while 1:
+        try:
+            img.seek(frameCount)
+            frameCount += 1
+        except:
+            break
+    print("frame count: ", frameCount - 1)
 
 
 def test1():
@@ -41,4 +51,4 @@ def test2():
 
 
 if __name__ == '__main__':
-    test2()
+    test()
